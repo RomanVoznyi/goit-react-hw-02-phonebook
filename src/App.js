@@ -39,16 +39,19 @@ class App extends Component {
     const { contacts, filter } = this.state;
 
     return (
-      <div className={s.myPhonebook}>
-        <h1 className={s.bigHeader}>My phonebook</h1>
-        <ContactForm onSubmit={this.handleSubmit} contacts={contacts} />
-        <Filter value={filter} onChange={this.changeInput} />
-        <h2 className={s.smallHeader}>My contacts:</h2>
-        <ContactList
-          contacts={this.getVisibleContacts()}
-          onDelete={this.deleteContact}
-        />
-      </div>
+      <>
+        <h1 className={s.header}>Task 1. Feedback form</h1>
+        <div className={s.myPhonebook}>
+          <h2 className={s.bigHeader}>My phonebook</h2>
+          <ContactForm onSubmit={this.handleSubmit} contacts={contacts} />
+          <Filter value={filter} onChange={this.changeInput} />
+          <h2 className={s.smallHeader}>My contacts:</h2>
+          <ContactList
+            contacts={this.getVisibleContacts()}
+            onDelete={this.deleteContact}
+          />
+        </div>
+      </>
     );
   }
 }
