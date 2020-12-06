@@ -40,7 +40,7 @@ class App extends Component {
 
     return (
       <>
-        <h1 className={s.header}>Task 1. Feedback form</h1>
+        <h1 className={s.header}>Task 2. PhoneBook</h1>
         <div className={s.myPhonebook}>
           <h2 className={s.bigHeader}>My phonebook</h2>
           <ContactForm onSubmit={this.handleSubmit} contacts={contacts} />
